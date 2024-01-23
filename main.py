@@ -65,7 +65,7 @@ class Qr_Generator:
             self.mesg='All fields are required!'
             self.lbl_mesg.config(text=self.mesg,fg='red')
         else:
-            qr_data=(f"Employee ID: {self.var_emp_code.get()}\nEmplyee Name: {self.var_name.get()}\nEmployee Designation: {self.var_designation.get()}\nEmployee Department:{self.var_department.get()}")
+            qr_data=(f"Employee ID: {self.var_emp_code.get()}\nEmployee Name: {self.var_name.get()}\nEmployee Designation: {self.var_designation.get()}\nEmployee Department:{self.var_department.get()}")
             qr_code = q.make(qr_data) 
            # print(qr_code)
             qr_code=resizeimage.resize_cover(qr_code,[180,180])
@@ -81,5 +81,5 @@ class Qr_Generator:
         
 
 root=Tk()
-cl =Qr_Generator(root)    #4
+cl =Qr_Generator(root)  
 root.mainloop()
